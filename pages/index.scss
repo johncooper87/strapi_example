@@ -1,0 +1,326 @@
+$primary: #6c757d;
+
+@import '../node_modules/bootstrap//scss/bootstrap.scss';
+
+@import '../src/components/styles.scss';
+
+$color1: #7acbce;
+$color2: #7ab7cc;
+$color3: #7a9ccc;
+
+.logo {
+  height: 24px;
+}
+
+body {
+  background-color: #fafafa;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.blur-edges {
+  display: inline-block;
+  position: relative;
+  &:after {
+    content: "";
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    box-shadow: 0 0 2px 4px white inset, 
+    0 0 4px 8px white inset, 
+    0 0 10px 20px white inset;
+  }
+}
+
+.nav-1 {
+  color: $color1 !important;
+}
+.nav-2 {
+  color: $color2 !important;
+}
+.nav-3 {
+  color: $color3 !important;
+}
+
+.title {
+  text-align: center;
+  padding: 12px;
+}
+
+@mixin centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+@mixin image-title {
+  .image {
+    @include centered;
+    padding: 0px;
+  }
+  .title {
+    @include centered;
+    padding: 0px;
+    color: darken($color3, 30);
+  }
+}
+
+.item {
+  padding: 12px 0px;
+
+  .card {
+    min-width: 300px;
+    max-width: 800px;
+    margin: auto;
+    padding: 12px;
+  }
+
+  .header {
+    padding: 8px 16px;
+    margin: 0px;
+    min-height: 128px;
+  }
+  
+  @include image-title;
+
+  img {
+    max-width: 100%;
+    max-height: 250px;
+  }
+
+  .body {
+    padding: 12px 24px;
+  }
+
+  .actions {
+    padding: 8px 16px;
+  }
+
+  .button {
+    float: right;
+  }
+}
+
+.entity-page {
+
+  .header {
+    box-shadow: 0px 4px 8px -2px rgba(0,0,0,0.2),
+      0px 8px 10px 0px rgba(0,0,0,0.14),
+      0px 2px 20px 0px rgba(0,0,0,0.12);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.28);
+    background-color: white;
+
+    .container.row {
+      padding: 12px;
+      min-height: 128px;
+    }
+
+    @include image-title;
+
+    img {
+      max-width: 100%;
+      max-height: 350px;
+    }
+  }
+
+  .container {
+    min-width: 300px;
+    max-width: 1000px;
+    margin: auto;
+  }
+
+  .body {
+    padding: 24px;
+  }
+
+  .foot {
+    padding: 0px 24px;
+  }
+}
+
+.container {
+  overflow: hidden;
+}
+
+.department-item {
+  .header {
+    min-height: 64px;
+  }
+  .title {
+    justify-content: flex-start;
+  }
+}
+
+.study-event-item {
+  img {
+    max-height: 120px;
+  }
+
+  .blur-edges {
+    &:after {
+      box-shadow: 0 0 1px 2px white inset, 
+      0 0 2px 4px white inset, 
+      0 0 6px 12px white inset;
+    }
+  }
+}
+
+.study-event-page {
+  .header {
+    img {
+      max-height: 180px;
+    }
+  }
+
+  .blur-edges {
+    &:after {
+      box-shadow: 0 0 1px 2px white inset, 
+      0 0 2px 4px white inset, 
+      0 0 6px 12px white inset;
+    }
+  }
+}
+
+.declarations {
+  font-size: 18px;
+}
+
+.declaration {
+  padding: 12px;
+}
+
+.attachment-list-container {
+  padding: 12px 0px 12px 0px;
+}
+
+.footer-1 {
+  color: $color1;
+}
+
+.footer-2 {
+  color: $color3;
+}
+
+.footer-3 {
+}
+
+.footer-icon {
+  color: inherit;
+}
+
+.contact {
+  font-size: 14px;
+
+  > div:nth-of-type(1) {
+    display: inline-block;
+    width: 20%;
+    text-align: end;
+    vertical-align: top;
+    margin-right: 5%;
+  }
+
+  > div:nth-of-type(2) {
+    display: inline-block;
+    width: 75%;
+    > p {
+      margin-bottom: 4px;
+    }
+    > p:nth-of-type(2) {
+      color: rgba(255, 255, 255, 0.90);
+    }
+  }
+}
+
+.siteref {
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+
+  > div:nth-of-type(1) {
+    display: inline-block;
+    width: 25%;
+    text-align: end;
+    margin-right: 5%;
+  }
+
+  > div:nth-of-type(2) {
+    font-size: 16px;
+    display: inline-block;
+    width: 75%;
+  }
+
+  a {
+    color: rgba(255, 255, 255, 0.90);
+  }
+}
+
+.info-item {
+  font-size: 14px;
+  margin-bottom: 8px;
+
+  > div:nth-of-type(1) {
+    display: inline-block;
+    margin-left: 15%;
+  }
+
+  a {
+    color: rgba(255, 255, 255, 0.90);
+  }
+}
+
+.navbar {
+  max-width: 1000px;
+  margin: auto;
+}
+
+$color4: #343a40;
+
+.navbar-wrapper-top {
+  background-color: $color4;
+  position: sticky;
+  top: 0;
+  z-index: 1020;
+}
+
+footer {
+  width: 100%;
+  margin-top: 32px;
+  background-color: $color4;
+
+  .inner {
+    background-color: $color4;
+    max-width: 1000px;
+    margin: auto;
+    padding: 32px 0px;
+
+    .name {
+      padding-bottom: 24px;
+      margin-bottom: 8px;
+      border-bottom: 2px solid $color2;
+    }
+
+    h5, h4 {
+      color: white;
+      text-align: center;
+    }
+
+    h5 {
+      margin: 16px 0px;
+    }
+  }
+}
+
+html, body {
+  height: 100%;
+}
+
+body > div {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
